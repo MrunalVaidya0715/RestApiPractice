@@ -1,6 +1,6 @@
 import express from "express";
 import {v4 as uuidv4} from 'uuid'
-
+import { deleteUser, getUser } from "./controllers/users";
 
 const router = express.Router()
 
@@ -16,18 +16,10 @@ router.post('/', (req,res)=>{
 })
 
 
-router.get('/:id',(req,res)=>{
-    const {id} = req.params
-    const foundedUser = users.find((user)=> user.id=== id)
-    res.send(foundedUser)
-})
+router.get('/:id',getUser)
 
 
-router.delete('/:id', (req, res)=>{
-    const {id} = req.params
-    users = users.filter((user)=> user.id !== id)
-    res.send(`User with ${id} deleted Successfully`)
-})
+router.delete('/:id',deleteUser)
 
 router.patch('/:id', (req, res)=>{
     const { id} = req.params
