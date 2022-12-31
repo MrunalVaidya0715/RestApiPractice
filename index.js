@@ -1,5 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
+import userRoutes from './routes/users.js'
+
 const app = express();
 const PORT = 5001;
 
@@ -9,6 +11,9 @@ app.get('/', (req, res)=>{
     console.log("Done")
     
 })
+
+app.use('/users', userRoutes)
+
 app.listen(PORT, ()=>{
     console.log(`Server Listening at http://localhost:${PORT}`)
 })
