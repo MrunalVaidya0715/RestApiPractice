@@ -1,0 +1,28 @@
+{
+  "name": "restapipractice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrunalVaidya0715/RestApiPractice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrunalVaidya0715/RestApiPractice/issues"
+  },
+  "homepage": "https://github.com/MrunalVaidya0715/RestApiPractice#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
